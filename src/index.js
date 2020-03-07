@@ -54,19 +54,25 @@ class App extends Component {
             {packageJSON.name} {packageJSON.version}
           </h1>
           
-        <Tree content="main" type="ITEM" canHide open style={treeStyles}>
-        <Tree content="hello" type={<span style={typeStyles}></span>} canHide />
-        <Tree content="subtree with children" canHide>
-          <Tree content="hello" />
-          <Tree content="sub-subtree with children">
-            <Tree content={JSON.stringify(this.state.tree, null, '  ')} style={{ color: '#63b1de' }} />
+        <Tree content="main" type="ITEM" open style={treeStyles}>
+        <Tree content="Test">
+            <Tree content='test' style={{ color: '#63b1de' }} />
             <button onClick={this.updateTree}><Tree class="addContent" content="+" onClick={this.updateTree} style={{ color: '#63b1de' }} /></button>
-            
           </Tree>
-          <Tree content="hello" />
+        <Tree content="subtree with children">
+          <Tree content="sub-subtree with children">
+            <Tree content='test' style={{ color: '#63b1de' }} />
+            <button onClick={this.updateTree}><Tree class="addContent" content="+" onClick={this.updateTree} style={{ color: '#63b1de' }} /></button>
+          </Tree>
         </Tree>
-        <Tree content="hello" canHide />
-        <Tree content="hello" canHide />
+        <Tree content="Test">
+            <Tree content='test' style={{ color: '#63b1de' }} />
+            <button onClick={this.updateTree}><Tree class="addContent" content="+" onClick={this.updateTree} style={{ color: '#63b1de' }} /></button>
+          </Tree>
+        <Tree content="sub-subtree with children">
+            <Tree content='test' style={{ color: '#63b1de' }} />
+            <button onClick={this.updateTree}><Tree class="addContent" content="+" onClick={this.updateTree} style={{ color: '#63b1de' }} /></button>
+          </Tree>
       </Tree>
         </div>
         </div>
